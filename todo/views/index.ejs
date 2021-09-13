@@ -2,10 +2,12 @@
   <head>
     <title> Todo app  </title>
     <link href="../public/style.css" rel="stylesheet">
+    <script src="../index.js"></script>
     <style>
       * {
     font-family: Roboto;
     font-weight: bold;
+    font-size: 20px;
 }
 
 body {
@@ -16,6 +18,10 @@ body {
 .input{
   border: 4px solid #0ADE39;
 box-sizing: border-box;
+height: 30px;
+width: 65%;
+font-size: 12px;
+text-align: center;
 }
 .header {
   position: relative;
@@ -49,9 +55,12 @@ button{
     width: 24.5%;
     border: none;
     border-radius: 0;
+    font-size: 12px;
 }
 button:hover{
   background-color: whitesmoke;
+}
+button:active{background-color:#c2c0c0;
 }
 
 ul {
@@ -64,8 +73,9 @@ ul {
   <div class="container">
      <h2 class="header">TodoApp</h2>
 <form action ="/addtask" method="POST">
-       <input class="input" type="text" name="newtask" placeholder="Add New Task">        <button> Add Task </button>
+       <input class="input" type="text" name="task" placeholder="Add New Task">        <button> Add Task </button>
     <h2> Added Task </h2>
+    
   
 <button formaction="/removetask" type="submit"> Remove </button>
 </form>

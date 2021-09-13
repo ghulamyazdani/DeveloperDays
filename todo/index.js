@@ -11,8 +11,11 @@ app.post('/addtask', function (req, res) {
     res.render('index')
  });
 
- var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
+ var bodyParser = require('body-parser');
+//  app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
 
 var task = ["buy milk", "learn javascript", "learn express"];
 
